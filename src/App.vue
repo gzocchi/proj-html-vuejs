@@ -32,18 +32,22 @@ export default {
         facebook: {
           name: "Facebook",
           link: "#facebook_link",
+          icon: "fab fa-facebook-f"
         },
         instagram: {
           name: "Instagram",
           link: "#instagram_link",
+          icon: "fab fa-instagram"
         },
         twitter: {
           name: "Twitter",
           link: "#twitter_link",
+          icon: "fab fa-twitter"
         },
         youtube: {
           name: "YouTube",
           link: "#youtube_link",
+          icon: "fab fa-youtube"
         },
       },
       headerLink: {
@@ -123,7 +127,6 @@ export default {
             },
           },
         },
-
         news: {
           name: "News",
           link: "#",

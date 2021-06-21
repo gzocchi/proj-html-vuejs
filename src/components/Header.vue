@@ -2,12 +2,15 @@
   <header>
     <section class="nav_top container-fluid">
       <div class="container">
-        <h2>nav top</h2>
+        <div class="social">
+          <i v-for="item in social" :key="item" :class="[item.icon]"></i>
+        </div>
+        <div class="user_section"></div>
       </div>
     </section>
     <section class="nav_bottom container-fluid">
       <div class="container">
-        <nav class="my_nav navbar navbar-expand-lg navbar-light ">
+        <nav class="my_nav navbar navbar-expand-lg navbar-light p-0">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img
@@ -94,24 +97,59 @@ export default {
 <style scoped lang="scss">
 @import "../assets/style/general";
 
-.nav_top {
-  height: 40px;
-  border-bottom: 1px solid $fedora;
-}
+header {
+  height: $header_h;
+  color: $fedora;
 
-.nav_bottom {
-  height: 70px;
+  .nav_top {
+    height: $nav-top_h;
+    border-bottom: 1px solid $fedora;
 
-  .my_nav {
-    height: 100%;
-
-    button {
-      border-radius: 50px;
+    .social {
     }
-
-    i {
-      cursor: pointer;
+    .user_section {
     }
+  }
+
+  .nav_bottom {
+    // height: $nav-top_h;
+
+    .my_nav {
+      height: $nav-bottom_h;
+      color: $white;
+
+      & > div {
+        height: 100%;
+      }
+
+      #navbarSupportedContent {
+        height: 100%;
+      }
+
+      button {
+        border-radius: 50px;
+      }
+
+      i {
+        cursor: pointer;
+      }
+    }
+    .navbar-light .navbar-nav .show > .nav-link[data-v-61dd7a3d],
+    .navbar-light .navbar-nav .nav-link.active[data-v-61dd7a3d] {
+      color: $havelock_blue;
+    }
+    // .active::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: - 100%;
+    //   left: 0;
+    //   transform: translateY(+100%);
+    //   display: block;
+    //   height: 1px;
+    //   width: 100%;
+    //   margin: 0;
+    //   background-color: $havelock_blue;
+    // }
   }
 }
 </style>

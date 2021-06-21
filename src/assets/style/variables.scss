@@ -11,3 +11,8 @@ $shocking: #e280b1;
 
 // img
 $image_path: "/src/assets/img/";
+
+// header
+$header_h: 150px;
+$nav-top_h: 50px;
+$nav-bottom_h: $header_h - $nav-top_h
