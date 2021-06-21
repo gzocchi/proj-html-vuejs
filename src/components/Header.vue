@@ -2,10 +2,21 @@
   <header>
     <section class="nav_top container-fluid">
       <div class="container">
-        <div class="social">
-          <i v-for="item in social" :key="item" :class="[item.icon]"></i>
+        <div class="row">
+          <div class="social col-6 p-1">
+            <a v-for="item in social" :key="item" :href="item.link">
+              <i :class="[item.icon]"></i>
+            </a>
+          </div>
+          <div class="user_section col-6">
+            <a href="#">Shopping Cart</a>
+            <a href="#">My Account <i class="fas fa-chevron-down"></i></a>
+            <a href="#" class="active"
+              ><i class="fas fa-shopping-cart"></i> Cart
+              <i class="fas fa-chevron-down"></i
+            ></a>
+          </div>
         </div>
-        <div class="user_section"></div>
       </div>
     </section>
     <section class="nav_bottom container-fluid">
@@ -71,7 +82,7 @@
                 </li>
               </ul>
 
-              <button class="btn btn-primary px-4 text-uppercase" type="submit">
+              <button class="btn px-4 text-uppercase" type="submit">
                 Shop Now!
               </button>
 
@@ -103,11 +114,55 @@ header {
 
   .nav_top {
     height: $nav-top_h;
-    border-bottom: 1px solid $fedora;
+    border-bottom: 0.5px solid rgba($fedora, 0.5);
 
+    & > div {
+      height: 100%;
+    }
+
+    .social,
+    .user_section {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
     .social {
+      a {
+        color: inherit;
+        i {
+          margin: 10px;
+        }
+      }
     }
     .user_section {
+      justify-content: flex-end;
+      line-height: $nav-top_h;
+
+      a {
+        height: 100%;
+        padding: 0 20px;
+        color: inherit;
+        text-decoration: none;
+
+        &:hover,
+        &.active {
+          background-color: rgba($fedora, 0.1);
+        }
+
+        &:nth-child(2) {
+          border-left: 0.5px solid rgba($fedora, 0.5);
+          border-right: 0.5px solid rgba($fedora, 0.5);
+        }
+
+        &:last-child {
+          width: 200px;
+          text-align: center;
+        }
+
+        i {
+          margin: 5px;
+        }
+      }
     }
   }
 
@@ -116,7 +171,7 @@ header {
 
     .my_nav {
       height: $nav-bottom_h;
-      color: $white;
+      background-color: $white;
 
       & > div {
         height: 100%;
@@ -128,6 +183,10 @@ header {
 
       button {
         border-radius: 50px;
+        color: $white;
+        background-color: $havelock_blue;
+        border-color: $havelock_blue;
+        font-weight: 500;
       }
 
       i {

@@ -3,6 +3,7 @@
     <Header :social="socialInfo" :navLink="headerLink" />
     <Main />
     <Footer :social="socialInfo" :brand="brandInfo" />
+    <Banner />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
+import Banner from "./components/Banner.vue";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     Header,
     Main,
     Footer,
+    Banner,
   },
   data() {
     return {
