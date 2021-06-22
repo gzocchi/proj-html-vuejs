@@ -3,7 +3,7 @@
     <Header :social="socialInfo" :navLink="headerLink" />
     <Jumbotron title="Brand New Arrivals" msg="New collection from New York" />
     <Main />
-    <Footer :social="socialInfo" :brand="brandInfo" :post="post" :tag="tag" />
+    <Footer :social="socialInfo" :brand="brandInfo" :post="post" :tags="tag" />
     <Banner />
   </div>
 </template>
@@ -155,57 +155,57 @@ export default {
         },
       },
       products: [],
-      post: {
-        post_1599_17_45_34: {
+      post: [
+        {
           title: "Aenean lobortis sapien enim viverra",
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
           comments: [],
         },
-        post_1599_14_30_12: {
+        {
           title: "Duis ac massa semper maximus",
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
           comments: [],
         },
-        post_1599_12_00_34: {
+        {
           title: "Nunc fermint nulla eu justo sem id",
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
           comments: [],
         },
-        post_1599_10_05_34: {
+        {
           title: "Aliquam posuere magna eget nibh",
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
           comments: [],
         },
-        post_1598_15_35_34: {
+        {
           title: "Aliquam posuere magna eget nibh",
           date: "September 8th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
           comments: [],
         },
-        post_1598_15_30_42: {
+        {
           title: "Cras ac nulla ac consecte rutrum",
           date: "September 8th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
           comments: [],
         },
-        post_1598_12_12_36: {
+        {
           title: "Fusce mattis nunc ut aliquam",
           date: "September 8th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
           comments: [],
         },
-      },
+      ],
       tag: [
         "Black",
         "boots",
@@ -242,5 +242,10 @@ export default {
   font-family: $font_family;
   font-size: $font_size;
   color: $shark;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 </style>
