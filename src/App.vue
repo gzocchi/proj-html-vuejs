@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header :social="socialInfo" :navLink="headerLink" />
+    <Jumbotron title="Brand New Arrivals" msg="New collection from New York" />
     <Main />
     <Footer :social="socialInfo" :brand="brandInfo" />
     <Banner />
@@ -9,6 +10,7 @@
 
 <script>
 import Header from "./components/Header.vue";
+import Jumbotron from "./components/Jumbotron.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
 import Banner from "./components/Banner.vue";
@@ -17,6 +19,7 @@ export default {
   name: "App",
   components: {
     Header,
+    Jumbotron,
     Main,
     Footer,
     Banner,
@@ -35,22 +38,22 @@ export default {
         facebook: {
           name: "Facebook",
           link: "#facebook_link",
-          icon: "fab fa-facebook-f"
+          icon: "fab fa-facebook-f",
         },
         instagram: {
           name: "Instagram",
           link: "#instagram_link",
-          icon: "fab fa-instagram"
+          icon: "fab fa-instagram",
         },
         twitter: {
           name: "Twitter",
           link: "#twitter_link",
-          icon: "fab fa-twitter"
+          icon: "fab fa-twitter",
         },
         youtube: {
           name: "YouTube",
           link: "#youtube_link",
-          icon: "fab fa-youtube"
+          icon: "fab fa-youtube",
         },
       },
       headerLink: {

@@ -3,7 +3,7 @@
     <section class="nav_top container-fluid">
       <div class="container">
         <div class="row">
-          <div class="social col-6 p-1">
+          <div class="social col-6 px-3">
             <a v-for="item in social" :key="item" :href="item.link">
               <i :class="[item.icon]"></i>
             </a>
@@ -41,7 +41,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li
                   v-for="element in navLink"
                   :key="element"
@@ -82,7 +82,7 @@
                 </li>
               </ul>
 
-              <button class="btn px-4 text-uppercase" type="submit">
+              <button class="btn my_btn px-4 mx-5 text-uppercase" type="button">
                 Shop Now!
               </button>
 
@@ -99,9 +99,6 @@
 export default {
   name: "Header",
   props: ["social", "navLink"],
-  data() {
-    return {};
-  },
 };
 </script>
 
@@ -124,7 +121,6 @@ header {
     .user_section {
       display: flex;
       align-items: center;
-      height: 100%;
     }
     .social {
       a {
@@ -167,8 +163,6 @@ header {
   }
 
   .nav_bottom {
-    // height: $nav-top_h;
-
     .my_nav {
       height: $nav-bottom_h;
       background-color: $white;
@@ -181,7 +175,7 @@ header {
         height: 100%;
       }
 
-      button {
+      button.my_btn {
         border-radius: 50px;
         color: $white;
         background-color: $havelock_blue;
@@ -194,7 +188,11 @@ header {
       }
     }
     .navbar-light .navbar-nav .show > .nav-link[data-v-61dd7a3d],
-    .navbar-light .navbar-nav .nav-link.active[data-v-61dd7a3d] {
+    .navbar-light .navbar-nav .nav-link.active[data-v-61dd7a3d],
+    .navbar-light .navbar-nav .nav-link[data-v-61dd7a3d]:hover,
+    .navbar-light .navbar-nav .nav-link[data-v-61dd7a3d]:focus,
+    .dropdown-item[data-v-61dd7a3d]:hover,
+    .dropdown-item[data-v-61dd7a3d]:focus {
       color: $havelock_blue;
     }
     // .active::after {
