@@ -154,10 +154,123 @@ export default {
           },
         },
       },
-      products: [],
+      products: {
+        man: {
+          leather_jacket: {
+            name: "Black Leather Jacket",
+            img: "./assets/img/products/black_elegant_leather_jacket.jpg",
+            originalPrice: 235,
+            discountedPrice: 200,
+            tag: ["Jackets", "Jeans", "Men"],
+            vote: 5,
+          },
+          leather_suit: {
+            name: "Black Leather Suit",
+            img: "./assets/img/products/black_leather_suit.jpg",
+            originalPrice: 176,
+            discountedPrice: false,
+            tag: ["Jackets", "Men"],
+            vote: false,
+          },
+          blue_jacket: {
+            name: "Blue Jacket & Stripe Tee",
+            img: "./assets/img/products/blue_jacket_and_white_stripe_tee.jpg",
+            originalPrice: 580,
+            discountedPrice: false,
+            tag: ["Jackets", "Suits", "Men"],
+            vote: false,
+          },
+
+          black_leather_jacket: {
+            name: "Modern Black Leather Suit",
+            img: "./assets/img/products/modern_black_leather_suit.jpg",
+            originalPrice: 96,
+            discountedPrice: false,
+            tag: ["Jackets", "Men"],
+            vote: false,
+          },
+          leather_blue: {
+            name: "Blue Leather Jacket",
+            img: "./assets/img/products/blue_leather_jacket.jpg",
+            originalPrice: 80,
+            discountedPrice: 60,
+            tag: ["Jackets", "Men"],
+            vote: false,
+          },
+        },
+        women: {
+          spring_printed: {
+            name: "Spring Printed Dress",
+            img: "./assets/img/products/spring_printed_dress.jpg",
+            originalPrice: 47,
+            discountedPrice: false,
+            tag: ["Dress", "Women"],
+            vote: 5,
+          },
+          modern_love: {
+            name: "Modern Love Tee",
+            img: "./assets/img/products/modern_love_tee.jpg",
+            originalPrice: 68,
+            discountedPrice: false,
+            tag: ["T-Shirts", "Women"],
+            vote: false,
+          },
+          black_jacket: {
+            name: "Black Jacket",
+            img: "./assets/img/products/black_leather_jacket.jpg",
+            originalPrice: 125,
+            discountedPrice: false,
+            tag: ["Jacket", "Women"],
+            vote: false,
+          },
+          hipster_black: {
+            name: "Hipster Black Top",
+            img: "./assets/img/products/hipster_black_top.jpg",
+            originalPrice: 57,
+            discountedPrice: false,
+            tag: ["T-Shirts", "Women"],
+            vote: false,
+          },
+        },
+        accessories: {
+          leather_gloves: {
+            name: "Leather Gloves",
+            img: "./assets/img/products/leather_gloves.jpg",
+            originalPrice: 45,
+            discountedPrice: false,
+            tag: ["Accessories", "Gloves", "Men", "Women"],
+            vote: 5,
+          },
+          casual_belts: {
+            name: "Casual Leather Belts",
+            img: "./assets/img/products/casual_leather_belts.jpg",
+            originalPrice: 65,
+            discountedPrice: false,
+            tag: ["Accessories", "Men"],
+            vote: false,
+          },
+          modern_boots: {
+            name: "Modern Leather Boots",
+            img: "./assets/img/products/modern_leather_boots.jpg",
+            originalPrice: 50,
+            discountedPrice: 30,
+            tag: ["Accessories", "Men", "Miscellaneous", "Shoes"],
+            vote: false,
+          },
+          brown_shoes: {
+            name: "Brown Dress Shoes",
+            img: "./assets/img/products/brown_dress_shoes.jpg",
+            originalPrice: 46,
+            discountedPrice: 36,
+            tag: ["Accessories", "Miscellaneous", "Shoes", "Women"],
+            vote: false,
+          },
+        },
+      },
       post: [
         {
           title: "Aenean lobortis sapien enim viverra",
+          img: "./assets/img/blog/post_img_12-700x441.jpg",
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
@@ -165,6 +278,7 @@ export default {
         },
         {
           title: "Duis ac massa semper maximus",
+          img: "./assets/img/blog/post_img_11-700x441.jpg",
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
@@ -172,6 +286,7 @@ export default {
         },
         {
           title: "Nunc fermint nulla eu justo sem id",
+          img: "./assets/img/blog/post_img_10-700x441.jpg",
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
@@ -242,10 +357,5 @@ export default {
   font-family: $font_family;
   font-size: $font_size;
   color: $shark;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
 }
 </style>

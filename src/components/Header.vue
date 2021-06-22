@@ -127,7 +127,7 @@ header {
     }
     .social {
       a {
-        // color: inherit;
+        color: inherit;
         i {
           margin: 10px;
         }
@@ -140,8 +140,8 @@ header {
       a {
         height: 100%;
         padding: 0 20px;
-        // color: inherit;
-        // text-decoration: none;
+        color: inherit;
+        text-decoration: none;
 
         &:hover,
         &.active {

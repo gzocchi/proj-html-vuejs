@@ -100,6 +100,11 @@ footer {
     background-color: #303337;
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   .info {
     font-size: 11px;
 
@@ -126,7 +131,6 @@ footer {
     }
 
     .products {
-      
     }
 
     .posts {
@@ -154,11 +158,13 @@ footer {
   }
   .copyright {
     background-color: #1d1f22;
+
     p {
       margin-top: 15px;
       font-size: 10px;
       font-weight: 500;
     }
+
     img {
       height: 20px;
     }
