@@ -2,7 +2,7 @@
   <div id="app">
     <Header :social="socialInfo" :navLink="headerLink" />
     <Jumbotron title="Brand New Arrivals" msg="New collection from New York" />
-    <Main />
+    <Main :collection="productCollection" />
     <Footer :social="socialInfo" :brand="brandInfo" :post="post" :tags="tag" />
     <Banner />
   </div>
@@ -265,6 +265,26 @@ export default {
             tag: ["Accessories", "Miscellaneous", "Shoes", "Women"],
             vote: false,
           },
+        },
+      },
+      productCollection: {
+        winter: {
+          name: "Winter Collection",
+          msg: "Stylish and warm",
+          link: "#_winter_collection",
+          img: require("./assets/img/products/winter_collection_bg.jpg"),
+        },
+        spring: {
+          name: "Spring Collection",
+          msg: "Bright and colorful",
+          link: "#_spring_collection",
+          img: require("./assets/img/products/spring_collection_bg.jpg"),
+        },
+        autumn: {
+          name: "Autumn Collection",
+          msg: "Rich and Comfortable",
+          link: "#_autumn_collection",
+          img: require("./assets/img/products/autumn_collection_bg.jpg"),
         },
       },
       post: [
