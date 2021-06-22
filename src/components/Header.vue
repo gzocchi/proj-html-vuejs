@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="social col-6 px-3">
-            <a v-for="item in social" :key="item" :href="item.link">
+            <a v-for="(item, index) in social" :key="index" :href="item.link">
               <i :class="[item.icon]"></i>
             </a>
           </div>
@@ -43,8 +43,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li
-                  v-for="element in navLink"
-                  :key="element"
+                  v-for="(element, index) in navLink"
+                  :key="index"
                   :class="{ dropdown: element.drop }"
                   class="nav-item"
                 >
@@ -73,7 +73,10 @@
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <li v-for="subelement in element.drop" :key="subelement">
+                    <li
+                      v-for="(subelement, index) in element.drop"
+                      :key="index"
+                    >
                       <a class="dropdown-item" href="#">{{
                         subelement.name
                       }}</a>

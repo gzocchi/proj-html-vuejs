@@ -4,8 +4,18 @@
       <i class="far fa-envelope"></i>
     </a>
     <h4 class="m-0 ps-3">Subscribe now and get special offers</h4>
-    <input type="text" class="form-control" placeholder="insert your email" />
-    <button class="btn my_btn px-4 mx-3 text-uppercase" type="button">
+    <input
+      type="text"
+      class="form-control"
+      v-model.trim="email"
+      @keydown.enter="sendMail"
+      placeholder="insert your email"
+    />
+    <button
+      class="btn my_btn px-4 mx-3 text-uppercase"
+      @click="sendMail"
+      type="button"
+    >
       send
     </button>
   </div>
@@ -14,6 +24,16 @@
 <script>
 export default {
   name: "Subscribe",
+  data() {
+    return {
+      email: "",
+    };
+  },
+  methods: {
+    sendMail() {
+      this.email = "";
+    },
+  },
 };
 </script>
 
