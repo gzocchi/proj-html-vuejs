@@ -82,5 +82,6 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 </style>
