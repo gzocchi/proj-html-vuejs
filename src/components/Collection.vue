@@ -40,6 +40,7 @@ div {
     color: inherit;
     text-decoration: none;
     font-size: 12px;
+    font-weight: 500;
     background-color: rgba($white, 0.2);
     border: 1px solid $white;
     border-radius: 25px;
