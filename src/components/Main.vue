@@ -28,7 +28,9 @@
 
     <section class="blog">
       <h2>Blog Carousel</h2>
-      <h2>Blog Extract</h2>
+      <div v-if="posts" class="new_arrivals container-fluid">
+        <BlogExtract :posts="posts" />
+      </div>
       <h2>Product Review</h2>
       <h2>Brand Logo</h2>
     </section>
@@ -43,6 +45,8 @@ import BestSeller from "./BestSeller.vue";
 import PromoBanner from "./PromoBanner.vue";
 import NewArrivals from "./NewArrivals.vue";
 
+import BlogExtract from "./BlogExtract.vue";
+
 export default {
   name: "Main",
   components: {
@@ -51,6 +55,7 @@ export default {
     BestSeller,
     PromoBanner,
     NewArrivals,
+    BlogExtract,
   },
   props: {
     products: {
@@ -61,6 +66,10 @@ export default {
       type: Object,
       require: true,
     },
+    posts:{
+      type: Array,
+      require: true
+    }
   },
 };
 </script>

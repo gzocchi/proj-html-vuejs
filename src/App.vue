@@ -2,8 +2,8 @@
   <div id="app">
     <Header :social="socialInfo" :navLink="headerLink" />
     <Jumbotron title="Brand New Arrivals" msg="New collection from New York" />
-    <Main :products="products" :collection="productCollection" />
-    <Footer :social="socialInfo" :brand="brandInfo" :post="post" :tags="tag" />
+    <Main :products="products" :collection="productCollection" :posts="posts"/>
+    <Footer :social="socialInfo" :brand="brandInfo" :posts="posts" :tags="tag" />
     <Banner />
   </div>
 </template>
@@ -287,10 +287,10 @@ export default {
           img: require("./assets/img/products/autumn_collection_bg.jpg"),
         },
       },
-      post: [
+      posts: [
         {
           title: "Aenean lobortis sapien enim viverra",
-          img: "./assets/img/blog/post_img_12-700x441.jpg",
+          img: require("./assets/img/blog/post_img_12-700x441.jpg"),
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
@@ -298,7 +298,7 @@ export default {
         },
         {
           title: "Duis ac massa semper maximus",
-          img: "./assets/img/blog/post_img_11-700x441.jpg",
+          img: require("./assets/img/blog/post_img_11-700x441.jpg"),
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",
@@ -306,7 +306,7 @@ export default {
         },
         {
           title: "Nunc fermint nulla eu justo sem id",
-          img: "./assets/img/blog/post_img_10-700x441.jpg",
+          img: require("./assets/img/blog/post_img_10-700x441.jpg"),
           date: "September 9th, 2015",
           text:
             "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,",

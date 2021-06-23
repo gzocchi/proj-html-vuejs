@@ -42,7 +42,7 @@
         <div class="posts px-3 col-3">
           <h6 class="text-uppercase">recent posts</h6>
           <ul class="m-0 p-0">
-            <li v-for="(item, index) in post" :key="index" class="py-2">
+            <li v-for="(item, index) in posts" :key="index" class="py-2">
               <i class="fas fa-chevron-right"></i>
               <a href="#">{{ item.title }}</a>
             </li>
@@ -77,7 +77,7 @@ export default {
   components: {
     Subscribe,
   },
-  props: ["social", "brand", "post", "tags"],
+  props: ["social", "brand", "posts", "tags"],
   computed: {
     web() {
       let website = this.brand.website.split(".");
