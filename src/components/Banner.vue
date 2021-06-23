@@ -22,6 +22,7 @@ export default {
 
 section {
   position: fixed;
+  z-index: 2;
   right: 20px;
   top: 140px;
 
@@ -37,6 +38,7 @@ section {
     background-color: $white;
     border-radius: 7px;
     cursor: pointer;
+    box-shadow: 0px 0px 30px 3px rgba($fedora, 0.3);
 
     i,
     .price {
