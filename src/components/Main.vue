@@ -27,7 +27,24 @@
     </section>
 
     <section class="blog">
-      <h2>Blog Carousel</h2>
+      <div class="blog_carousel container_fluid  text-center">
+        <div class="container py-5">
+          <img
+            src="../assets/img/blog/man_testimonial.png"
+            alt="Darío Pineda"
+            class="my-4"
+          />
+          <p>
+            Curabitur non tristique tortor. Vestibulum aliquet suscipit ipsum in
+            volutpat. Donec vel lacinia sem, vitae semper nulla. In hac
+            habitasse platea dictumst. Mauris consectetur est et nibh sadip
+            hendrerit bibendum.
+          </p>
+          <h5>Darío Pineda, <span class="fw-light fs-6">Theme Fusion</span></h5>
+          <i class="fas fa-circle"></i>
+          <i class="far fa-circle"></i>
+        </div>
+      </div>
 
       <div v-if="posts" class="new_arrivals container-fluid">
         <BlogExtract :posts="posts" />
@@ -107,6 +124,22 @@ export default {
   background-repeat: repeat;
 }
 
+.blog_carousel {
+  color: $white;
+  background-image: url(../assets/img/blog/testimonials_home_1_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  p {
+    max-width: 60%;
+    margin: 24px auto;
+  }
+  i {
+    margin: 20px 3px;
+    cursor: pointer;
+  }
+}
+
 .brand_logo {
   padding: 50px;
   background-color: rgba($fedora, 0.1);
@@ -119,6 +152,7 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
   }
 }
 </style>
