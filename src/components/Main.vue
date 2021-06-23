@@ -15,7 +15,9 @@
           </div>
         </div>
       </div>
-      <h2>Best Seller</h2>
+      <div v-if="products" class="best_seller container-fluid">
+        <BestSeller :products="products" />
+      </div>
       <div v-if="collection" class="promo_banner container-fluid">
         <PromoBanner />
       </div>
@@ -35,6 +37,7 @@
 <script>
 import Featured from "./Featured.vue";
 import Collection from "./Collection.vue";
+import BestSeller from "./BestSeller.vue";
 import PromoBanner from "./PromoBanner.vue";
 
 export default {
@@ -42,6 +45,7 @@ export default {
   components: {
     Featured,
     Collection,
+    BestSeller,
     PromoBanner,
   },
   props: {
@@ -60,7 +64,8 @@ export default {
 <style scoped lang="scss">
 @import "../assets/style/variables.scss";
 
-.featured {
+.featured,
+.best_seller {
   padding: 60px 0;
 }
 
