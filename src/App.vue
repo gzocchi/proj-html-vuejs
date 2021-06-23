@@ -163,6 +163,7 @@ export default {
             discountedPrice: 200,
             tag: ["Jackets", "Jeans", "Men"],
             vote: 5,
+            review: "by admin"
           },
           leather_suit: {
             name: "Black Leather Suit",
@@ -206,6 +207,7 @@ export default {
             discountedPrice: false,
             tag: ["Dress", "Women"],
             vote: 5,
+            review: "by admin"
           },
           modern_love: {
             name: "Modern Love Tee",
@@ -240,6 +242,7 @@ export default {
             discountedPrice: false,
             tag: ["Accessories", "Gloves", "Men", "Women"],
             vote: 5,
+            review: "by Beardman"
           },
           casual_belts: {
             name: "Casual Leather Belts",

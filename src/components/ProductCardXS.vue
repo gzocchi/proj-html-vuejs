@@ -7,7 +7,12 @@
         <i v-for="n in product.vote" :key="n" class="fas fa-star"></i>
       </div>
 
-      <p class="m-0">{{ product.review }}</p>
+      <span :class="{ discount: product.discountedPrice }" class="me-2">
+        &dollar;{{ product.originalPrice }}</span
+      >
+      <span v-if="product.discountedPrice">
+        &dollar;{{ product.discountedPrice }}
+      </span>
     </div>
 
     <div class="image">
@@ -18,7 +23,7 @@
 
 <script>
 export default {
-  name: "ProductCardReview",
+  name: "ProductCardXS",
   props: {
     product: {
       type: Object,
@@ -52,6 +57,18 @@ export default {
 
     i {
       color: $havelock_blue;
+    }
+
+    span {
+      font-size: 18px;
+
+      &:not(.discount) {
+        text-decoration: underline;
+      }
+
+      &.discount {
+        text-decoration: line-through;
+      }
     }
   }
 

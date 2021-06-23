@@ -145,7 +145,7 @@ export default {
 }
 
 .product_review {
-  border-top: 1px solid rgba($fedora, .1);
+  border-top: 1px solid rgba($fedora, 0.1);
 }
 
 .brand_logo {

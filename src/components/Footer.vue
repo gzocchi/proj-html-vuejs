@@ -37,9 +37,9 @@
 
         <div class="products px-3 col-3">
           <h6 class="text-uppercase">top rated products</h6>
-          <ProductCardReview :product="products.accessories.leather_gloves" />
-          <ProductCardReview :product="products.men.leather_jacket" />
-          <ProductCardReview :product="products.women.spring_printed" />
+          <ProductCardXS :product="products.accessories.leather_gloves" />
+          <ProductCardXS :product="products.men.leather_jacket" />
+          <ProductCardXS :product="products.women.spring_printed" />
         </div>
 
         <div class="posts px-3 col-3">
@@ -74,13 +74,13 @@
 
 <script>
 import Subscribe from "./Subscribe.vue";
-import ProductCardReview from "./ProductCardReview.vue";
+import ProductCardXS from "./ProductCardXS.vue";
 
 export default {
   name: "Footer",
   components: {
     Subscribe,
-    ProductCardReview,
+    ProductCardXS,
   },
   props: {
     social: {
