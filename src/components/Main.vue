@@ -1,7 +1,9 @@
 <template>
   <main>
     <section class="products">
-      <h2>Featured Product</h2>
+      <div v-if="products" class="featured container-fluid">
+        <Featured :products="products" />
+      </div>
       <div class="collection container-fluid">
         <div class="row">
           <div
@@ -14,7 +16,7 @@
         </div>
       </div>
       <h2>Best Seller</h2>
-      <div class="promo_banner container-fluid">
+      <div v-if="collection" class="promo_banner container-fluid">
         <PromoBanner />
       </div>
       <h2>New Arrivals</h2>
@@ -31,21 +33,36 @@
 </template>
 
 <script>
+import Featured from "./Featured.vue";
 import Collection from "./Collection.vue";
 import PromoBanner from "./PromoBanner.vue";
 
 export default {
   name: "Main",
   components: {
+    Featured,
     Collection,
     PromoBanner,
   },
-  props: ["collection"],
+  props: {
+    products: {
+      type: Object,
+      require: true,
+    },
+    collection: {
+      type: Object,
+      require: true,
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @import "../assets/style/variables.scss";
+
+.featured {
+  padding: 60px 0;
+}
 
 .collection .col-4 {
   height: $collection_card_h;

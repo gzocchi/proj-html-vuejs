@@ -3,12 +3,12 @@
     <section class="nav_top container-fluid">
       <div class="container">
         <div class="row">
-          <div class="social col-6 px-3">
+          <div class="social col-2 px-3">
             <a v-for="(item, index) in social" :key="index" :href="item.link">
               <i :class="[item.icon]"></i>
             </a>
           </div>
-          <div class="user_section col-6">
+          <div class="user_section col-10">
             <a href="#">Shopping Cart</a>
             <a href="#">My Account <i class="fas fa-chevron-down"></i></a>
             <a href="#" class="active"
@@ -116,8 +116,8 @@ header {
     height: $nav-top_h;
     border-bottom: 0.5px solid rgba($fedora, 0.5);
 
-    & > div {
-      height: 100%;
+    .container {
+      height: $nav-top_h;
     }
 
     .social,

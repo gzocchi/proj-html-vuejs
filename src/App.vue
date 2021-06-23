@@ -2,7 +2,7 @@
   <div id="app">
     <Header :social="socialInfo" :navLink="headerLink" />
     <Jumbotron title="Brand New Arrivals" msg="New collection from New York" />
-    <Main :collection="productCollection" />
+    <Main :products="products" :collection="productCollection" />
     <Footer :social="socialInfo" :brand="brandInfo" :post="post" :tags="tag" />
     <Banner />
   </div>
@@ -155,10 +155,10 @@ export default {
         },
       },
       products: {
-        man: {
+        men: {
           leather_jacket: {
             name: "Black Leather Jacket",
-            img: "./assets/img/products/black_elegant_leather_jacket.jpg",
+            img: require("./assets/img/products/black_elegant_leather_jacket.jpg"),
             originalPrice: 235,
             discountedPrice: 200,
             tag: ["Jackets", "Jeans", "Men"],
@@ -166,7 +166,7 @@ export default {
           },
           leather_suit: {
             name: "Black Leather Suit",
-            img: "./assets/img/products/black_leather_suit.jpg",
+            img: require("./assets/img/products/black_leather_suit.jpg"),
             originalPrice: 176,
             discountedPrice: false,
             tag: ["Jackets", "Men"],
@@ -174,7 +174,7 @@ export default {
           },
           blue_jacket: {
             name: "Blue Jacket & Stripe Tee",
-            img: "./assets/img/products/blue_jacket_and_white_stripe_tee.jpg",
+            img: require("./assets/img/products/blue_jacket_and_white_stripe_tee.jpg"),
             originalPrice: 580,
             discountedPrice: false,
             tag: ["Jackets", "Suits", "Men"],
@@ -183,7 +183,7 @@ export default {
 
           black_leather_jacket: {
             name: "Modern Black Leather Suit",
-            img: "./assets/img/products/modern_black_leather_suit.jpg",
+            img: require("./assets/img/products/modern_black_leather_suit.jpg"),
             originalPrice: 96,
             discountedPrice: false,
             tag: ["Jackets", "Men"],
@@ -191,7 +191,7 @@ export default {
           },
           leather_blue: {
             name: "Blue Leather Jacket",
-            img: "./assets/img/products/blue_leather_jacket.jpg",
+            img: require("./assets/img/products/blue_leather_jacket.jpg"),
             originalPrice: 80,
             discountedPrice: 60,
             tag: ["Jackets", "Men"],
@@ -201,7 +201,7 @@ export default {
         women: {
           spring_printed: {
             name: "Spring Printed Dress",
-            img: "./assets/img/products/spring_printed_dress.jpg",
+            img: require("./assets/img/products/spring_printed_dress.jpg"),
             originalPrice: 47,
             discountedPrice: false,
             tag: ["Dress", "Women"],
@@ -209,7 +209,7 @@ export default {
           },
           modern_love: {
             name: "Modern Love Tee",
-            img: "./assets/img/products/modern_love_tee.jpg",
+            img: require("./assets/img/products/modern_love_tee.jpg"),
             originalPrice: 68,
             discountedPrice: false,
             tag: ["T-Shirts", "Women"],
@@ -217,7 +217,7 @@ export default {
           },
           black_jacket: {
             name: "Black Jacket",
-            img: "./assets/img/products/black_leather_jacket.jpg",
+            img: require("./assets/img/products/black_leather_jacket.jpg"),
             originalPrice: 125,
             discountedPrice: false,
             tag: ["Jacket", "Women"],
@@ -225,7 +225,7 @@ export default {
           },
           hipster_black: {
             name: "Hipster Black Top",
-            img: "./assets/img/products/hipster_black_top.jpg",
+            img: require("./assets/img/products/hipster_black_top.jpg"),
             originalPrice: 57,
             discountedPrice: false,
             tag: ["T-Shirts", "Women"],
@@ -235,7 +235,7 @@ export default {
         accessories: {
           leather_gloves: {
             name: "Leather Gloves",
-            img: "./assets/img/products/leather_gloves.jpg",
+            img: require("./assets/img/products/leather_gloves.jpg"),
             originalPrice: 45,
             discountedPrice: false,
             tag: ["Accessories", "Gloves", "Men", "Women"],
@@ -243,7 +243,7 @@ export default {
           },
           casual_belts: {
             name: "Casual Leather Belts",
-            img: "./assets/img/products/casual_leather_belts.jpg",
+            img: require("./assets/img/products/casual_leather_belts.jpg"),
             originalPrice: 65,
             discountedPrice: false,
             tag: ["Accessories", "Men"],
@@ -251,7 +251,7 @@ export default {
           },
           modern_boots: {
             name: "Modern Leather Boots",
-            img: "./assets/img/products/modern_leather_boots.jpg",
+            img: require("./assets/img/products/modern_leather_boots.jpg"),
             originalPrice: 50,
             discountedPrice: 30,
             tag: ["Accessories", "Men", "Miscellaneous", "Shoes"],
@@ -259,7 +259,7 @@ export default {
           },
           brown_shoes: {
             name: "Brown Dress Shoes",
-            img: "./assets/img/products/brown_dress_shoes.jpg",
+            img: require("./assets/img/products/brown_dress_shoes.jpg"),
             originalPrice: 46,
             discountedPrice: 36,
             tag: ["Accessories", "Miscellaneous", "Shoes", "Women"],
