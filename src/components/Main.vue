@@ -21,7 +21,9 @@
       <div v-if="collection" class="promo_banner container-fluid">
         <PromoBanner />
       </div>
-      <h2>New Arrivals</h2>
+      <div v-if="products" class="new_arrivals container-fluid">
+        <NewArrivals :products="products" />
+      </div>
     </section>
 
     <section class="blog">
@@ -39,6 +41,7 @@ import Featured from "./Featured.vue";
 import Collection from "./Collection.vue";
 import BestSeller from "./BestSeller.vue";
 import PromoBanner from "./PromoBanner.vue";
+import NewArrivals from "./NewArrivals.vue";
 
 export default {
   name: "Main",
@@ -47,6 +50,7 @@ export default {
     Collection,
     BestSeller,
     PromoBanner,
+    NewArrivals,
   },
   props: {
     products: {
@@ -65,7 +69,8 @@ export default {
 @import "../assets/style/variables.scss";
 
 .featured,
-.best_seller {
+.best_seller,
+.new_arrivals {
   padding: 60px 0;
 }
 
