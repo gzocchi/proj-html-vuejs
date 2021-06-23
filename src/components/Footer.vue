@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/style/variables";
+@import "../assets/style/variables.scss";
 
 footer {
   font-weight: 500;

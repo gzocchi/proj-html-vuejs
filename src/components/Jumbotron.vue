@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/style/general";
+@import "../assets/style/variables.scss";
 
 div.jumbotron-fluid {
   display: flex;

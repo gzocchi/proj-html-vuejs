@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/style/variables";
+@import "../assets/style/variables.scss";
 
 section {
   position: fixed;

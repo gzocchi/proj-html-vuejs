@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/style/general";
+@import "../assets/style/variables.scss";
 
 header {
   height: $header_h;
