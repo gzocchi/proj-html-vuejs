@@ -28,13 +28,24 @@
 
     <section class="blog">
       <h2>Blog Carousel</h2>
+
       <div v-if="posts" class="new_arrivals container-fluid">
         <BlogExtract :posts="posts" />
       </div>
+
       <h2>Product Review</h2>
-      <h2>Brand Logo</h2>
+
+      <div class="brand_logo container-fluid">
+        <h5 class="text-uppercase text-center my-3">Brand Logos</h5>
+        <div class="logo container">
+          <img src="../assets/img/blog/b_logotype_6.png" alt="Authentic" />
+          <img src="../assets/img/blog/b_logotype_7.png" alt="Yard" />
+          <img src="../assets/img/blog/b_logotype_1.png" alt="Forest" />
+          <img src="../assets/img/blog/b_logotype_2.png" alt="Bedge" />
+          <img src="../assets/img/blog/b_logotype_3.png" alt="Beard" />
+        </div>
+      </div>
     </section>
-    <h2></h2>
   </main>
 </template>
 
@@ -66,10 +77,10 @@ export default {
       type: Object,
       require: true,
     },
-    posts:{
+    posts: {
       type: Array,
-      require: true
-    }
+      require: true,
+    },
   },
 };
 </script>
@@ -94,5 +105,20 @@ export default {
   background-position: center;
   background-size: auto;
   background-repeat: repeat;
+}
+
+.brand_logo {
+  padding: 50px;
+  background-color: rgba($fedora, 0.1);
+
+  h5 {
+    font-size: 16px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 </style>
