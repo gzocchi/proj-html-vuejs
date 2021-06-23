@@ -101,7 +101,16 @@
 <script>
 export default {
   name: "Header",
-  props: ["social", "navLink"],
+  props: {
+    social: {
+      type: Object,
+      require: true
+    },
+    navLink:{
+      type: Object,
+      require: true
+    }
+  }
 };
 </script>
 

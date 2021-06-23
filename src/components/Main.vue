@@ -4,7 +4,7 @@
       <div v-if="products" class="featured container-fluid">
         <Featured :products="products" />
       </div>
-      <div class="collection container-fluid">
+      <div v-if="collection" class="collection container-fluid">
         <div class="row">
           <div
             v-for="(season, index) in collection"
@@ -50,7 +50,7 @@
         <BlogExtract :posts="posts" />
       </div>
 
-      <div class="product_review container-fluid">
+      <div v-if="products" class="product_review container-fluid">
         <ProductReview :products="products" />
       </div>
 
