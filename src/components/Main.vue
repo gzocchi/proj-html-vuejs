@@ -50,7 +50,9 @@
         <BlogExtract :posts="posts" />
       </div>
 
-      <h2>Product Review</h2>
+      <div class="product_review container-fluid">
+        <ProductReview :products="products" />
+      </div>
 
       <div class="brand_logo container-fluid">
         <h5 class="text-uppercase text-center my-3">Brand Logos</h5>
@@ -72,8 +74,8 @@ import Collection from "./Collection.vue";
 import BestSeller from "./BestSeller.vue";
 import PromoBanner from "./PromoBanner.vue";
 import NewArrivals from "./NewArrivals.vue";
-
 import BlogExtract from "./BlogExtract.vue";
+import ProductReview from "./ProductReview.vue";
 
 export default {
   name: "Main",
@@ -84,6 +86,7 @@ export default {
     PromoBanner,
     NewArrivals,
     BlogExtract,
+    ProductReview,
   },
   props: {
     products: {
@@ -107,7 +110,8 @@ export default {
 
 .featured,
 .best_seller,
-.new_arrivals {
+.new_arrivals,
+.product_review {
   padding: 60px 0;
 }
 
@@ -138,6 +142,10 @@ export default {
     margin: 20px 3px;
     cursor: pointer;
   }
+}
+
+.product_review {
+  border-top: 1px solid rgba($fedora, .1);
 }
 
 .brand_logo {

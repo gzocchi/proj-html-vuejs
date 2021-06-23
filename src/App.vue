@@ -3,7 +3,7 @@
     <Header :social="socialInfo" :navLink="headerLink" />
     <Jumbotron title="Brand New Arrivals" msg="New collection from New York" />
     <Main :products="products" :collection="productCollection" :posts="posts"/>
-    <Footer :social="socialInfo" :brand="brandInfo" :posts="posts" :tags="tag" />
+    <Footer :social="socialInfo" :brand="brandInfo" :posts="posts" :tags="tag" :products="products" />
     <Banner />
   </div>
 </template>

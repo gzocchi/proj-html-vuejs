@@ -37,6 +37,9 @@
 
         <div class="products px-3 col-3">
           <h6 class="text-uppercase">top rated products</h6>
+          <ProductCardReview :product="products.accessories.leather_gloves" />
+          <ProductCardReview :product="products.men.leather_jacket" />
+          <ProductCardReview :product="products.women.spring_printed" />
         </div>
 
         <div class="posts px-3 col-3">
@@ -71,13 +74,36 @@
 
 <script>
 import Subscribe from "./Subscribe.vue";
+import ProductCardReview from "./ProductCardReview.vue";
 
 export default {
   name: "Footer",
   components: {
     Subscribe,
+    ProductCardReview,
   },
-  props: ["social", "brand", "posts", "tags"],
+  props: {
+    social: {
+      type: Object,
+      require: true,
+    },
+    brand: {
+      type: Object,
+      require: true,
+    },
+    posts: {
+      type: Array,
+      require: true,
+    },
+    tags: {
+      type: Array,
+      require: true,
+    },
+    products: {
+      type: Object,
+      require: true,
+    },
+  },
   computed: {
     web() {
       let website = this.brand.website.split(".");
@@ -130,8 +156,8 @@ footer {
       }
     }
 
-    .products {
-    }
+    // .products {
+    // }
 
     .posts {
       li {

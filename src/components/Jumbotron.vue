@@ -42,7 +42,7 @@ div.jumbotron-fluid {
   height: $jumbotron_h;
   color: $white;
   background-image: url("../assets/img/home1_slide_three_bg_2.jpg");
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 
