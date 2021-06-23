@@ -10,7 +10,7 @@
       <span :class="{ discount: product.discountedPrice }" class="me-2">
         &dollar;{{ product.originalPrice }}</span
       >
-      <span v-if="product.discountedPrice">
+      <span v-if="product.discountedPrice" :class="{ discounted: product.discountedPrice }">
         &dollar;{{ product.discountedPrice }}
       </span>
     </div>
@@ -62,7 +62,7 @@ export default {
     span {
       font-size: 18px;
 
-      &:not(.discount) {
+      &.discounted {
         text-decoration: underline;
       }
 
